@@ -2,6 +2,8 @@ const express = require('express');
 const hbs = require('hbs');
 const fs = require('fs');
 
+const port = process.env.PORT || 3000;
+console.log(port);
 var app = express();
 
 hbs.registerPartials(__dirname +'/views/partials');
@@ -48,6 +50,6 @@ app.get('/bad',(req,res)=>{
     errorMessage:'unable to fullfill request'
   });
 });
-app.listen(3000,()=>{
-  console.log('listining app on port 3000');
+app.listen(port,()=>{
+  console.log(`listining app on port ${port}`);
 });
