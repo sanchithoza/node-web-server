@@ -43,6 +43,12 @@ app.get('/about',(req,res)=>{
     pageTitle:'About Page'
   });
 });
+app.get('/projects',(req,res)=>{
+  res.render('projects.hbs',{
+    pageTitle:'My Git Projects',
+    welcomeMessage:'Welcome to my NODEJS Project Page',
+  })
+});
 
 app.get('/bad',(req,res)=>{
   res.send({
